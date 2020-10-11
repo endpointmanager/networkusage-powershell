@@ -1,0 +1,882 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<helpItems xmlns="http://msh" schema="maml">
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+<command:details>
+<command:name>Get-AttributedNetworkUsage</command:name>
+<maml:description>
+<maml:para>Gets network usage data for each individual application.</maml:para>
+</maml:description>
+<command:verb>Get</command:verb>
+<command:noun>AttributedNetworkUsage</command:noun>
+</command:details>
+<maml:description>
+<maml:para>Gets network usage data for each individual application.
+Get-AttributedNetworkUsage is using the Windows Runtime API [ConnectionProfile.GetAttributedNetworkUsageAsync(...)] to get it&apos;s output.</maml:para>
+</maml:description>
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Get-AttributedNetworkUsage</maml:name>
+<command:parameter required="true" position="named" >
+<maml:name>ConnectionProfile</maml:name>
+<command:parameterValue required="true">ConnectionProfile</command:parameterValue>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>EndTime</maml:name>
+<command:parameterValue required="true">DateTime</command:parameterValue>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>NetworkUsageStates</maml:name>
+<command:parameterValue required="true">NetworkUsageStates</command:parameterValue>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>StartTime</maml:name>
+<command:parameterValue required="true">DateTime</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<command:parameters>
+<command:parameter required="true" position="named" >
+<maml:name>ConnectionProfile</maml:name>
+<maml:description>
+<maml:para>Use [Get-InternetConnectionProfile] or [Get-ConnectionProfiles] to get a ConnectionProfile</maml:para>
+</maml:description>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>EndTime</maml:name>
+<maml:description>
+<maml:para>The end time over which to retrieve data.</maml:para>
+</maml:description>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>NetworkUsageStates</maml:name>
+<maml:description>
+<maml:para>Use [New-NetworkUsageStates] to generate the (optional) input parameter</maml:para>
+</maml:description>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>StartTime</maml:name>
+<maml:description>
+<maml:para>The start time over which to retrieve data.</maml:para>
+</maml:description>
+</command:parameter>
+</command:parameters>
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+</dev:type>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>Windows.Networking.Connectivity.AttributedNetworkUsage</maml:name>
+</dev:type>
+</command:returnValue>
+</command:returnValues>
+<command:examples>
+<command:example>
+<maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+<dev:code>Get-AttributedNetworkUsage -ConnectionProfile (Get-InternetConnectionProfile)</dev:code>
+<dev:remarks>
+<maml:para>Gets network usage data for each individual application from your connection profile associated with the internet connection</maml:para>
+</dev:remarks>
+</command:example>
+</command:examples>
+<maml:relatedLinks>
+<maml:navigationLink>
+</maml:navigationLink>
+</maml:relatedLinks>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+<command:details>
+<command:name>Get-ConnectionCost</command:name>
+<maml:description>
+<maml:para>Gets the cost information for the connection.</maml:para>
+</maml:description>
+<command:verb>Get</command:verb>
+<command:noun>ConnectionCost</command:noun>
+</command:details>
+<maml:description>
+<maml:para>Gets the cost information for the connection.
+Get-ConnectionCost is using the Windows Runtime API [ConnectionProfile.GetConnectionCost(...)] to get it&apos;s output.</maml:para>
+</maml:description>
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Get-ConnectionCost</maml:name>
+<command:parameter required="true" position="named" >
+<maml:name>ConnectionProfile</maml:name>
+<command:parameterValue required="true">ConnectionProfile</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<command:parameters>
+<command:parameter required="true" position="named" >
+<maml:name>ConnectionProfile</maml:name>
+<maml:description>
+<maml:para>Use [Get-InternetConnectionProfile] or [Get-ConnectionProfiles] to get a ConnectionProfile</maml:para>
+</maml:description>
+</command:parameter>
+</command:parameters>
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+</dev:type>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>Windows.Networking.Connectivity.ConnectionCost</maml:name>
+</dev:type>
+</command:returnValue>
+</command:returnValues>
+<command:examples>
+<command:example>
+<maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+<dev:code></dev:code>
+</command:example>
+</command:examples>
+<maml:relatedLinks>
+<maml:navigationLink>
+</maml:navigationLink>
+</maml:relatedLinks>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+<command:details>
+<command:name>Get-ConnectionProfiles</command:name>
+<maml:description>
+<maml:para>Gets a list of profiles for connections, active or otherwise, on the local machine.</maml:para>
+</maml:description>
+<command:verb>Get</command:verb>
+<command:noun>ConnectionProfiles</command:noun>
+</command:details>
+<maml:description>
+<maml:para>Gets a list of profiles for connections, active or otherwise, on the local machine.
+Get-InternetConnectionProfile is using the Windows Runtime API [NetworkInformation.GetConnectionProfiles(...)] to get it&apos;s output.</maml:para>
+</maml:description>
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Get-ConnectionProfiles</maml:name>
+</command:syntaxItem>
+</command:syntax>
+<command:parameters>
+</command:parameters>
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+</dev:type>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>Windows.Networking.Connectivity.ConnectionProfile</maml:name>
+</dev:type>
+<maml:description>
+<maml:para>siehe msdocs</maml:para>
+</maml:description>
+</command:returnValue>
+</command:returnValues>
+<maml:alertSet>
+<maml:alert>
+<maml:para>note</maml:para>
+</maml:alert>
+</maml:alertSet>
+<command:examples>
+<command:example>
+<maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+<dev:code></dev:code>
+</command:example>
+</command:examples>
+<maml:relatedLinks>
+<maml:navigationLink>
+</maml:navigationLink>
+</maml:relatedLinks>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+<command:details>
+<command:name>Get-ConnectivityIntervals</command:name>
+<maml:description>
+<maml:para>Gets a list of ConnectivityInterval objects, which indicate the timestamp for when the network connection began, and a time-span for the duration of that connection.</maml:para>
+</maml:description>
+<command:verb>Get</command:verb>
+<command:noun>ConnectivityIntervals</command:noun>
+</command:details>
+<maml:description>
+<maml:para>Gets a list of ConnectivityInterval objects, which indicate the timestamp for when the network connection began, and a time-span for the duration of that connection.
+Get-ConnectivityIntervals is using the Windows Runtime API [ConnectionProfile.GetConnectivityIntervalsAsync(...)] to get it&apos;s output.</maml:para>
+</maml:description>
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Get-ConnectivityIntervals</maml:name>
+<command:parameter required="true" position="named" >
+<maml:name>ConnectionProfile</maml:name>
+<command:parameterValue required="true">ConnectionProfile</command:parameterValue>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>EndTime</maml:name>
+<command:parameterValue required="true">DateTime</command:parameterValue>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>NetworkUsageStates</maml:name>
+<command:parameterValue required="true">NetworkUsageStates</command:parameterValue>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>StartTime</maml:name>
+<command:parameterValue required="true">DateTime</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<command:parameters>
+<command:parameter required="true" position="named" >
+<maml:name>ConnectionProfile</maml:name>
+<maml:description>
+<maml:para>Use [Get-InternetConnectionProfile] or [Get-ConnectionProfiles] to get a ConnectionProfile</maml:para>
+</maml:description>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>EndTime</maml:name>
+<maml:description>
+<maml:para>The end time over which to retrieve data.</maml:para>
+</maml:description>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>NetworkUsageStates</maml:name>
+<maml:description>
+<maml:para>The state of the connection profile for which usage data should be returned. (Roaming=DoNotCare and Shared=DoNotCare is default)</maml:para>
+</maml:description>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>StartTime</maml:name>
+<maml:description>
+<maml:para>The start time over which to retrieve data. Can be no more than 60 days prior to the current time.</maml:para>
+</maml:description>
+</command:parameter>
+</command:parameters>
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+</dev:type>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>Windows.Networking.Connectivity.ConnectivityInterval</maml:name>
+</dev:type>
+</command:returnValue>
+</command:returnValues>
+<command:examples>
+<command:example>
+<maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+<dev:code>Get-ConnectivityIntervals -ConnectionProfile (Get-InternetConnectionProfile)</dev:code>
+<dev:remarks>
+<maml:para>Gets network usage data for each individual application from your connection profile associated with the internet connection</maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+</command:example>
+<command:example>
+<maml:title>-------------------------- EXAMPLE 2 --------------------------</maml:title>
+<dev:code>Get-ConnectivityIntervals -ConnectionProfile (Get-InternetConnectionProfile) -StartTime (Get-Date).AddDays(-1) -NetworkUsageStates (New-NetworkUsageStates -Roaming Yes -Shared No)</dev:code>
+<dev:remarks>
+<maml:para>Gets network usage data for each individual application from your connection profile associated with the internet connection, only when roaming was in use</maml:para>
+</dev:remarks>
+</command:example>
+</command:examples>
+<maml:relatedLinks>
+<maml:navigationLink>
+</maml:navigationLink>
+</maml:relatedLinks>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+<command:details>
+<command:name>Get-DataPlanStatus</command:name>
+<maml:description>
+<maml:para>Gets the current domain authentication status for a network connection. Possible values are defined by DomainConnectivityLevel.</maml:para>
+</maml:description>
+<command:verb>Get</command:verb>
+<command:noun>DataPlanStatus</command:noun>
+</command:details>
+<maml:description>
+<maml:para>Gets the current domain authentication status for a network connection. Possible values are defined by DomainConnectivityLevel.
+Get-DataPlanStatus is using the Windows Runtime API [ConnectionProfile.GetDataPlanStatus(...)] to get it&apos;s output.</maml:para>
+</maml:description>
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Get-DataPlanStatus</maml:name>
+<command:parameter required="true" position="named" >
+<maml:name>ConnectionProfile</maml:name>
+<command:parameterValue required="true">ConnectionProfile</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<command:parameters>
+<command:parameter required="true" position="named" >
+<maml:name>ConnectionProfile</maml:name>
+<maml:description>
+<maml:para>Use [Get-InternetConnectionProfile] or [Get-ConnectionProfiles] to get a ConnectionProfile</maml:para>
+</maml:description>
+</command:parameter>
+</command:parameters>
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+</dev:type>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>Windows.Networking.Connectivity.DataPlanStatus</maml:name>
+</dev:type>
+</command:returnValue>
+</command:returnValues>
+<command:examples>
+<command:example>
+<maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+<dev:code></dev:code>
+</command:example>
+</command:examples>
+<maml:relatedLinks>
+<maml:navigationLink>
+</maml:navigationLink>
+</maml:relatedLinks>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+<command:details>
+<command:name>Get-DomainConnectivityLevel</command:name>
+<maml:description>
+<maml:para>Gets the current domain authentication status for a network connection.</maml:para>
+</maml:description>
+<command:verb>Get</command:verb>
+<command:noun>DomainConnectivityLevel</command:noun>
+</command:details>
+<maml:description>
+<maml:para>Gets the current domain authentication status for a network connection.
+Get-DomainConnectivityLevel is using the Windows Runtime API [ConnectionProfile.GetDomainConnectivityLevel] to get it&apos;s output.</maml:para>
+</maml:description>
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Get-DomainConnectivityLevel</maml:name>
+<command:parameter required="true" position="named" >
+<maml:name>ConnectionProfile</maml:name>
+<command:parameterValue required="true">ConnectionProfile</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<command:parameters>
+<command:parameter required="true" position="named" >
+<maml:name>ConnectionProfile</maml:name>
+<maml:description>
+<maml:para>Use [Get-InternetConnectionProfile] or [Get-ConnectionProfiles] to get a ConnectionProfile</maml:para>
+</maml:description>
+</command:parameter>
+</command:parameters>
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+</dev:type>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>Windows.Networking.Connectivity.DomainConnectivityLevel</maml:name>
+</dev:type>
+</command:returnValue>
+</command:returnValues>
+<command:examples>
+<command:example>
+<maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+<dev:code></dev:code>
+</command:example>
+</command:examples>
+<maml:relatedLinks>
+<maml:navigationLink>
+</maml:navigationLink>
+</maml:relatedLinks>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+<command:details>
+<command:name>Get-InternetConnectionProfile</command:name>
+<maml:description>
+<maml:para>Gets the connection profile associated with the internet connection currently used by the local machine.</maml:para>
+</maml:description>
+<command:verb>Get</command:verb>
+<command:noun>InternetConnectionProfile</command:noun>
+</command:details>
+<maml:description>
+<maml:para>Gets the connection profile associated with the internet connection currently used by the local machine.
+Get-InternetConnectionProfile is using the Windows Runtime API [NetworkInformation.GetInternetConnectionProfile(...)] to get it&apos;s output.</maml:para>
+</maml:description>
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Get-InternetConnectionProfile</maml:name>
+</command:syntaxItem>
+</command:syntax>
+<command:parameters>
+</command:parameters>
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+</dev:type>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>Windows.Networking.Connectivity.ConnectionProfile</maml:name>
+</dev:type>
+</command:returnValue>
+</command:returnValues>
+<command:examples>
+<command:example>
+<maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+<dev:code></dev:code>
+</command:example>
+</command:examples>
+<maml:relatedLinks>
+<maml:navigationLink>
+</maml:navigationLink>
+</maml:relatedLinks>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+<command:details>
+<command:name>Get-NetworkConnectivityLevel</command:name>
+<maml:description>
+<maml:para>Gets the network connectivity level for this connection. This value indicates what network resources, if any, are currently available.</maml:para>
+</maml:description>
+<command:verb>Get</command:verb>
+<command:noun>NetworkConnectivityLevel</command:noun>
+</command:details>
+<maml:description>
+<maml:para>Gets the network connectivity level for this connection. This value indicates what network resources, if any, are currently available.
+Possible return-values: ConstrainedInternetAccess(2), InternetAccess(3), LocalAccess(1), None(0)
+Get-NetworkConnectivityLevel is using the Windows Runtime API [ConnectionProfile.GetNetworkConnectivityLevel] to get it&apos;s output.</maml:para>
+</maml:description>
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Get-NetworkConnectivityLevel</maml:name>
+<command:parameter required="true" position="named" >
+<maml:name>ConnectionProfile</maml:name>
+<command:parameterValue required="true">ConnectionProfile</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<command:parameters>
+<command:parameter required="true" position="named" >
+<maml:name>ConnectionProfile</maml:name>
+<maml:description>
+<maml:para>Use [Get-InternetConnectionProfile] or [Get-ConnectionProfiles] to get a ConnectionProfile</maml:para>
+</maml:description>
+</command:parameter>
+</command:parameters>
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+</dev:type>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>Windows.Networking.Connectivity.NetworkConnectivityLevel</maml:name>
+</dev:type>
+</command:returnValue>
+</command:returnValues>
+<command:examples>
+<command:example>
+<maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+<dev:code></dev:code>
+</command:example>
+</command:examples>
+<maml:relatedLinks>
+<maml:navigationLink>
+</maml:navigationLink>
+</maml:relatedLinks>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+<command:details>
+<command:name>Get-NetworkNames</command:name>
+<maml:description>
+<maml:para>Retrieves names associated with the network with which the connection is currently established.</maml:para>
+</maml:description>
+<command:verb>Get</command:verb>
+<command:noun>NetworkNames</command:noun>
+</command:details>
+<maml:description>
+<maml:para>Retrieves names associated with the network with which the connection is currently established.
+Get-NetworkNames is using the Windows Runtime API [NetworkInformation.GetNetworkNames(...)] to get it&apos;s output.</maml:para>
+</maml:description>
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Get-NetworkNames</maml:name>
+<command:parameter required="true" position="named" >
+<maml:name>ConnectionProfile</maml:name>
+<command:parameterValue required="true">ConnectionProfile</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<command:parameters>
+<command:parameter required="true" position="named" >
+<maml:name>ConnectionProfile</maml:name>
+<maml:description>
+<maml:para>Use [Get-InternetConnectionProfile] or [Get-ConnectionProfiles] to get a ConnectionProfile</maml:para>
+</maml:description>
+</command:parameter>
+</command:parameters>
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+</dev:type>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>System.String</maml:name>
+</dev:type>
+</command:returnValue>
+</command:returnValues>
+<command:examples>
+<command:example>
+<maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+<dev:code></dev:code>
+</command:example>
+</command:examples>
+<maml:relatedLinks>
+<maml:navigationLink>
+</maml:navigationLink>
+</maml:relatedLinks>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+<command:details>
+<command:name>Get-NetworkUsage</command:name>
+<maml:description>
+<maml:para>Gets a list of the estimated data traffic and connection duration over a specified period of time, for a specific network usage state.</maml:para>
+</maml:description>
+<command:verb>Get</command:verb>
+<command:noun>NetworkUsage</command:noun>
+</command:details>
+<maml:description>
+<maml:para>Gets a list of the estimated data traffic and connection duration over a specified period of time, for a specific network usage state.
+Get-NetworkUsage is using the Windows Runtime API [ConnectionProfile.GetNetworkUsageAsync(...)] to get it&apos;s output.</maml:para>
+</maml:description>
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Get-NetworkUsage</maml:name>
+<command:parameter required="true" position="named" >
+<maml:name>ConnectionProfile</maml:name>
+<command:parameterValue required="true">ConnectionProfile</command:parameterValue>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>EndTime</maml:name>
+<command:parameterValue required="true">DateTime</command:parameterValue>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>Granularity</maml:name>
+<command:parameterValue required="true">DataUsageGranularity</command:parameterValue>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>NetworkUsageStates</maml:name>
+<command:parameterValue required="true">NetworkUsageStates</command:parameterValue>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>StartTime</maml:name>
+<command:parameterValue required="true">DateTime</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<command:parameters>
+<command:parameter required="true" position="named" >
+<maml:name>ConnectionProfile</maml:name>
+<maml:description>
+<maml:para>Use [Get-InternetConnectionProfile] or [Get-ConnectionProfiles] to get a ConnectionProfile</maml:para>
+</maml:description>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>EndTime</maml:name>
+<maml:description>
+<maml:para>The end time over which to retrieve data.</maml:para>
+</maml:description>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>Granularity</maml:name>
+<maml:description>
+<maml:para>If the specified granularity is PerMinute, the start time can be no more than 120 minutes prior to the current time. There are also restrictions with PerHour and PerDay in combination with the specified StartTime</maml:para>
+<maml:para>Values : PerMinute, PerHour, PerDay, Total</maml:para>
+</maml:description>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>NetworkUsageStates</maml:name>
+<maml:description>
+<maml:para>Use [New-NetworkUsageStates] to generate the (optional) input parameter</maml:para>
+</maml:description>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>StartTime</maml:name>
+<maml:description>
+<maml:para>The start time over which to retrieve data. Can be no more than 60 days prior to the current time.</maml:para>
+</maml:description>
+</command:parameter>
+</command:parameters>
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+</dev:type>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>Windows.Networking.Connectivity.NetworkUsage</maml:name>
+</dev:type>
+</command:returnValue>
+</command:returnValues>
+<maml:alertSet>
+<maml:alert>
+<maml:para>If you get an AggregateException, please take a look on the restrictions mentioned in the parameter-hints.</maml:para>
+</maml:alert>
+</maml:alertSet>
+<command:examples>
+<command:example>
+<maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+<dev:code>Get-NetworkUsage -ConnectionProfile (Get-InternetConnectionProfile)</dev:code>
+<dev:remarks>
+<maml:para>Gets estimated data traffic and connection duration from your connection profile associated with the internet connection</maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+</command:example>
+<command:example>
+<maml:title>-------------------------- EXAMPLE 2 --------------------------</maml:title>
+<dev:code>Get-NetworkUsage -ConnectionProfile (Get-InternetConnectionProfile) -StartTime (Get-Date).AddDays(-3)</dev:code>
+<dev:remarks>
+<maml:para>Gets estimated data traffic and connection duration from your connection profile associated with the internet connection from the last 3 days</maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+</command:example>
+<command:example>
+<maml:title>-------------------------- EXAMPLE 3 --------------------------</maml:title>
+<dev:code>Get-NetworkUsage -ConnectionProfile (Get-InternetConnectionProfile) -StartTime (Get-Date).AddDays(-3) -Granularity PerDay</dev:code>
+<dev:remarks>
+<maml:para>Gets a list (one result per Day) of the estimated data traffic and connection duration from your connection profile associated with the internet connection from the last 3 days</maml:para>
+<maml:para></maml:para>
+</dev:remarks>
+</command:example>
+<command:example>
+<maml:title>-------------------------- EXAMPLE 4 --------------------------</maml:title>
+<dev:code>Get-NetworkUsage -ConnectionProfile (Get-InternetConnectionProfile) -StartTime (Get-Date).AddHours(-3) -Granularity PerHour</dev:code>
+<dev:remarks>
+<maml:para>Gets a list (one result per Day) of the estimated data traffic and connection duration from your connection profile associated with the internet connection from the last 3 days</maml:para>
+</dev:remarks>
+</command:example>
+</command:examples>
+<maml:relatedLinks>
+<maml:navigationLink>
+</maml:navigationLink>
+</maml:relatedLinks>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+<command:details>
+<command:name>Get-ProviderNetworkUsage</command:name>
+<maml:description>
+<maml:para>Returns the bytes sent and bytes received for each MCC and MNC combination (the combination is represented by a ProviderId ).</maml:para>
+</maml:description>
+<command:verb>Get</command:verb>
+<command:noun>ProviderNetworkUsage</command:noun>
+</command:details>
+<maml:description>
+<maml:para>Returns the bytes sent and bytes received for each MCC and MNC combination (the combination is represented by a ProviderId ).
+Get-ProviderNetworkUsage is using the Windows Runtime API [ConnectionProfile.GetProviderNetworkUsageAsync()] to get it&apos;s output.</maml:para>
+</maml:description>
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Get-ProviderNetworkUsage</maml:name>
+<command:parameter required="true" position="named" >
+<maml:name>ConnectionProfile</maml:name>
+<command:parameterValue required="true">ConnectionProfile</command:parameterValue>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>EndTime</maml:name>
+<command:parameterValue required="true">DateTime</command:parameterValue>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>NetworkUsageStates</maml:name>
+<command:parameterValue required="true">NetworkUsageStates</command:parameterValue>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>StartTime</maml:name>
+<command:parameterValue required="true">DateTime</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<command:parameters>
+<command:parameter required="true" position="named" >
+<maml:name>ConnectionProfile</maml:name>
+<maml:description>
+<maml:para>Use [Get-InternetConnectionProfile] or [Get-ConnectionProfiles] to get a ConnectionProfile</maml:para>
+</maml:description>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>EndTime</maml:name>
+<maml:description>
+<maml:para>The end time over which to retrieve data.</maml:para>
+</maml:description>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>NetworkUsageStates</maml:name>
+<maml:description>
+<maml:para>Use [New-NetworkUsageStates] to generate the (optional) input parameter</maml:para>
+</maml:description>
+</command:parameter>
+<command:parameter required="false" position="named" >
+<maml:name>StartTime</maml:name>
+<maml:description>
+<maml:para>The start time over which to retrieve data. Can be no more than 60 days prior to the current time.</maml:para>
+</maml:description>
+</command:parameter>
+</command:parameters>
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+</dev:type>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>Windows.Networking.Connectivity.ConnectivityInterval</maml:name>
+</dev:type>
+</command:returnValue>
+</command:returnValues>
+<command:examples>
+<command:example>
+<maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+<dev:code></dev:code>
+</command:example>
+</command:examples>
+<maml:relatedLinks>
+<maml:navigationLink>
+</maml:navigationLink>
+</maml:relatedLinks>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+<command:details>
+<command:name>Get-SignalBars</command:name>
+<maml:description>
+<maml:para>Gets a value that indicates the current number of signal bars displayed by the Windows UI for the connection.</maml:para>
+</maml:description>
+<command:verb>Get</command:verb>
+<command:noun>SignalBars</command:noun>
+</command:details>
+<maml:description>
+<maml:para>Gets a value that indicates the current number of signal bars displayed by the Windows UI for the connection.
+Get-SignalBars is using the Windows Runtime API [ConnectionProfile.GetSignalBars()] to get it&apos;s output.</maml:para>
+</maml:description>
+<command:syntax>
+<command:syntaxItem>
+<maml:name>Get-SignalBars</maml:name>
+<command:parameter required="true" position="named" >
+<maml:name>ConnectionProfile</maml:name>
+<command:parameterValue required="true">ConnectionProfile</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<command:parameters>
+<command:parameter required="true" position="named" >
+<maml:name>ConnectionProfile</maml:name>
+<maml:description>
+<maml:para>Use [Get-InternetConnectionProfile] or [Get-ConnectionProfiles] to get a ConnectionProfile</maml:para>
+</maml:description>
+</command:parameter>
+</command:parameters>
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+</dev:type>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>System.Nullable`1[[System.Byte, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</maml:name>
+</dev:type>
+</command:returnValue>
+</command:returnValues>
+<command:examples>
+<command:example>
+<maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+<dev:code></dev:code>
+</command:example>
+</command:examples>
+<maml:relatedLinks>
+<maml:navigationLink>
+</maml:navigationLink>
+</maml:relatedLinks>
+</command:command>
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+<command:details>
+<command:name>New-NetworkUsageStates</command:name>
+<maml:description>
+<maml:para>Returns an object of type [Windows.Networking.Connectivity.NetworkUsageStates], which can be used for cmdlets where -NetworkUsageStates can be specified</maml:para>
+</maml:description>
+<command:verb>New</command:verb>
+<command:noun>NetworkUsageStates</command:noun>
+</command:details>
+<maml:description>
+<maml:para>Returns an object of type [Windows.Networking.Connectivity.NetworkUsageStates], which can be used for cmdlets where -NetworkUsageStates can be specified</maml:para>
+</maml:description>
+<command:syntax>
+<command:syntaxItem>
+<maml:name>New-NetworkUsageStates</maml:name>
+<command:parameter required="true" position="named" >
+<maml:name>Roaming</maml:name>
+<command:parameterValue required="true">TriStates</command:parameterValue>
+</command:parameter>
+<command:parameter required="true" position="named" >
+<maml:name>Shared</maml:name>
+<command:parameterValue required="true">TriStates</command:parameterValue>
+</command:parameter>
+</command:syntaxItem>
+</command:syntax>
+<command:parameters>
+<command:parameter required="true" position="named" >
+<maml:name>Roaming</maml:name>
+<maml:description>
+<maml:para>Please choose between [DoNotCare | No | Yes]</maml:para>
+<maml:para>Values : DoNotCare, No, Yes</maml:para>
+</maml:description>
+</command:parameter>
+<command:parameter required="true" position="named" >
+<maml:name>Shared</maml:name>
+<maml:description>
+<maml:para>Please choose between [DoNotCare | No | Yes]</maml:para>
+<maml:para>Values : DoNotCare, No, Yes</maml:para>
+</maml:description>
+</command:parameter>
+</command:parameters>
+<command:inputTypes>
+<command:inputType>
+<dev:type>
+</dev:type>
+</command:inputType>
+</command:inputTypes>
+<command:returnValues>
+<command:returnValue>
+<dev:type>
+<maml:name>Windows.Networking.Connectivity.NetworkUsageStates</maml:name>
+</dev:type>
+</command:returnValue>
+</command:returnValues>
+<command:examples>
+<command:example>
+<maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+<dev:code>$filterednetworkstate = New-NetworkUsageStates -Roaming DoNotCare -Shared DoNotCare</dev:code>
+</command:example>
+</command:examples>
+<maml:relatedLinks>
+<maml:navigationLink>
+</maml:navigationLink>
+</maml:relatedLinks>
+</command:command>
+</helpItems>
