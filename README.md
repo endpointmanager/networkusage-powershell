@@ -18,7 +18,8 @@ After the module is loaded (see Setup)...
 
 ### Get-AttributedNetworkUsage
 Gets network usage data for each individual application.  
-(Derived from ConnectionProfile.GetAttributedNetworkUsageAsync(DateTimeOffset, DateTimeOffset, NetworkUsageStates))  
+(Derived from ConnectionProfile.GetAttributedNetworkUsageAsync(DateTimeOffset, DateTimeOffset, NetworkUsageStates)) 
+#### Example (Get-AttributedNetworkUsage)
 ```ps
 Get-AttributedNetworkUsage -ConnectionProfile (Get-InternetConnectionProfile) -StartTime (Get-Date).AddDays(-7)
 ```
