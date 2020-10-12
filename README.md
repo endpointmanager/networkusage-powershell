@@ -5,6 +5,9 @@ This repo contains a PowerShell module that provides several cmdlets to retrieve
 It's functionality is derived from the official Windows.Networking.Connectivity Namespace from the Windows Runtime API.
 The project uses the new Windows 10 WinRT API Pack (Microsoft.Windows.SDK.Contracts) which was published in late 2019 for the first time.
 
+## Current Version
+v1.0.0.1
+
 ## Requirements
 
 * Windows 10
@@ -58,7 +61,7 @@ Retrieves names associated with the network with which the connection is current
 
 ### Get-NetworkUsage
 Gets a list of the estimated data traffic and connection duration over a specified period of time, for a specific network usage state.  
-(Derived from ConnectionProfile.ConnectionProfile.GetNetworkUsageAsync(DateTimeOffset, DateTimeOffset, DataUsageGranularity, NetworkUsageStates))  
+(Derived from ConnectionProfile.GetNetworkUsageAsync(DateTimeOffset, DateTimeOffset, DataUsageGranularity, NetworkUsageStates))  
 #### Example (Get-NetworkUsage)
 ```ps
 Get-NetworkUsage -ConnectionProfile (Get-InternetConnectionProfile) -Granularity PerDay -StartTime (Get-Date).AddDays(-3)
@@ -66,7 +69,7 @@ Get-NetworkUsage -ConnectionProfile (Get-InternetConnectionProfile) -Granularity
 
 ### Get-ProviderNetworkUsage
 Returns the bytes sent and bytes received for each MCC and MNC combination (the combination is represented by a ProviderId).  
-(Derived from ConnectionProfile.ConnectionProfile.GetProviderNetworkUsageAsync(DateTimeOffset, DateTimeOffset, NetworkUsageStates))  
+(Derived from ConnectionProfile.GetProviderNetworkUsageAsync(DateTimeOffset, DateTimeOffset, NetworkUsageStates))  
 
 ### Get-SignalBars
 Gets a value that indicates the current number of signal bars displayed by the Windows UI for the connection.  
@@ -77,8 +80,8 @@ Returns an object of type [Windows.Networking.Connectivity.NetworkUsageStates], 
 
 ### Setup
 
-* Copy the compiled dll-file (endpointmanager.networkusage.dll) including the folder containing the help files (en-US) to %ProgramFiles%\WindowsPowerShell\Modules\endpointmanager
-* OR use "Import-Module endpointmanager.networkusage.dll" within your powershell script
+* Extract the folder (endpointmanager.networkusage) from the Release-zip to %ProgramFiles%\WindowsPowerShell\Modules\endpointmanager
+* OR extract the Release-zip to your project path and use "Import-Module endpointmanager.networkusage.**psd1**" in your custom powershell script
 
 ## License
 
