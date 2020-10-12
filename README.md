@@ -81,7 +81,7 @@ Returns an object of type [Windows.Networking.Connectivity.NetworkUsageStates], 
 ### Setup
 
 * Extract the folder (endpointmanager.networkusage) from the Release-zip to %ProgramFiles%\WindowsPowerShell\Modules\endpointmanager
-* OR extract the Release-zip to your project path and use "Import-Module endpointmanager.networkusage.**psd1**" in your custom powershell script
+* OR use "**Import**-Module .\endpointmanager.networkusage\endpointmanager.networkusage.**psd1**" from the root directory of the extracted Release-zip
 
 ## License
 
