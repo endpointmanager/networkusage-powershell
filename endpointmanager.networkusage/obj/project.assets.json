@@ -855,9 +855,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Paul\\source\\repos\\endpointmanager.networkusage\\endpointmanager.networkusage\\endpointmanager.networkusage.project.csproj",
-      "projectName": "endpointmanager.networkusage.project",
-      "projectPath": "C:\\Users\\Paul\\source\\repos\\endpointmanager.networkusage\\endpointmanager.networkusage\\endpointmanager.networkusage.project.csproj",
+      "projectUniqueName": "C:\\Users\\Paul\\source\\repos\\endpointmanager.networkusage\\endpointmanager.networkusage\\endpointmanager.networkusage.csproj",
+      "projectName": "endpointmanager.networkusage",
+      "projectPath": "C:\\Users\\Paul\\source\\repos\\endpointmanager.networkusage\\endpointmanager.networkusage\\endpointmanager.networkusage.csproj",
       "packagesPath": "C:\\Users\\Paul\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Paul\\source\\repos\\endpointmanager.networkusage\\endpointmanager.networkusage\\obj\\",
       "projectStyle": "PackageReference",
