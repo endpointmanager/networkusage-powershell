@@ -83,21 +83,21 @@ Gets a value that indicates the current number of signal bars displayed by the W
 Returns an object of type [Windows.Networking.Connectivity.NetworkUsageStates], which can be used for cmdlets where -NetworkUsageStates can be passed  
 
 ### Setup
-#### Offline
-* Extract the folder (endpointmanager.networkusage) from the Release-zip to %ProgramFiles%\WindowsPowerShell\Modules\endpointmanager
-* OR use "**Import**-Module .\endpointmanager.networkusage\endpointmanager.networkusage.**psd1**" from the root directory of the extracted Release-zip
 #### Online
 * The **NetworkUsage-PowerShell module** is now listed on **PowerShell Gallery**, therefore it can be installed by using ...
 ```ps
 Install-Module endpointmanager.networkusage
 ```
+#### Offline
+* Extract the folder (endpointmanager.networkusage) from the Release-zip to %ProgramFiles%\WindowsPowerShell\Modules\endpointmanager
+* OR use "**Import**-Module .\endpointmanager.networkusage\endpointmanager.networkusage.**psd1**" from the root directory of the extracted Release-zip
 * Make sure you don't have any security-restrictions to load the Powershell-Module. If so, please remove any NTFS Alternate Data Streams (ADS) from the Release-zip before you extract it, and set the ExecutionPolicy to Unrestricted
 
     ```ps
     Unblock-File .\endpointmanager.networkusage_v1.0.0.1.zip
     Set-ExecutionPolicy -ExecutionPolicy Unrestricted
     ```
-
+    
 ## License
 
 See [LICENSE](LICENSE.md) file for licence rights and limitations (MIT)
