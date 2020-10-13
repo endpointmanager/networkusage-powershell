@@ -89,7 +89,7 @@ Returns an object of type [Windows.Networking.Connectivity.NetworkUsageStates], 
     Install-Module endpointmanager.networkusage
     ```
 #### Offline
-* Extract the folder (endpointmanager.networkusage) from the Release-zip to %ProgramFiles%\WindowsPowerShell\Modules\endpointmanager
+* Extract the folder (endpointmanager.networkusage) from the Release-zip to %ProgramFiles%\WindowsPowerShell\Modules\
 * OR use "**Import**-Module .\endpointmanager.networkusage\endpointmanager.networkusage.**psd1**" from the root directory of the extracted Release-zip
 * Make sure you don't have any security-restrictions to load the Powershell-Module. If so, please remove any NTFS Alternate Data Streams (ADS) from the Release-zip before you extract it, and set the ExecutionPolicy to Unrestricted
 
