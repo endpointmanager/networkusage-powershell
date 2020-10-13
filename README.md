@@ -6,7 +6,7 @@ It's functionality is derived from the official Windows.Networking.Connectivity 
 The project uses the new Windows 10 WinRT API Pack (Microsoft.Windows.SDK.Contracts) which was published in late 2019 for the first time.
 
 ## Current Version
-v1.0.0.1
+v1.0.0.2
 
 ## Requirements
 
@@ -83,9 +83,14 @@ Gets a value that indicates the current number of signal bars displayed by the W
 Returns an object of type [Windows.Networking.Connectivity.NetworkUsageStates], which can be used for cmdlets where -NetworkUsageStates can be passed  
 
 ### Setup
-
+#### Offline
 * Extract the folder (endpointmanager.networkusage) from the Release-zip to %ProgramFiles%\WindowsPowerShell\Modules\endpointmanager
 * OR use "**Import**-Module .\endpointmanager.networkusage\endpointmanager.networkusage.**psd1**" from the root directory of the extracted Release-zip
+#### Online
+* The **NetworkUsage-PowerShell module** is now listed on **PowerShell Gallery**, therefore it can be installed by using ...
+```ps
+Install-Module endpointmanager.networkusage
+```
 * Make sure you don't have any security-restrictions to load the Powershell-Module. If so, please remove any NTFS Alternate Data Streams (ADS) from the Release-zip before you extract it, and set the ExecutionPolicy to Unrestricted
 
     ```ps
