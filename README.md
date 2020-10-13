@@ -26,7 +26,7 @@ Gets network usage data for each individual application.
 ```ps
 Get-AttributedNetworkUsage -ConnectionProfile (Get-InternetConnectionProfile) -StartTime (Get-Date).AddDays(-7)
 ```  
-> You can verify the results in the Windows-Settings UI (Network & Internet -> Data usage -> Click on "View usage per app")
+> You can verify the results in the Windows-Settings UI (Network & Internet -> Data usage -> "View usage per app")
 
 ### Get-ConnectionCost
 Gets the cost information for the connection.  
@@ -41,7 +41,7 @@ Gets the cost information for the connection.
 (Derived from ConnectionProfile.GetConnectionCost())  
 
 ### Get-DataPlanStatus
-Gets the current status of the data plan associated with the connection.
+Gets the current status of the data plan associated with the connection.  
 (Derived from ConnectionProfile.GetDataPlanStatus())  
 > A data plan can be configured in the Windows-Settings UI (Network & Internet -> Data usage -> Set/Edit Limit) on WWAN Connections. (Maybe grayed out if the costs of connections are configured by GPO, e.g. "Set 4G Cost" is set to "Unrestricted")
 The measured data may differ from your service provider's measurement.
