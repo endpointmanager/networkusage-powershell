@@ -37,8 +37,8 @@ Gets a list of profiles for connections, active or otherwise, on the local machi
 (Derived from NetworkInformation.GetConnectionProfiles())  
 
 ### Get-ConnectivityIntervals
-Gets the cost information for the connection.  
-(Derived from ConnectionProfile.GetConnectionCost())  
+Gets a list of ConnectivityInterval objects, which indicate the timestamp for when the network connection began, and a time-span for the duration of that connection.
+(Derived from ConnectionProfile.GetConnectivityIntervalsAsync(DateTimeOffset, DateTimeOffset, NetworkUsageStates))  
 
 ### Get-DataPlanStatus
 Gets the current status of the data plan associated with the connection.  
