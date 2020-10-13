@@ -84,10 +84,10 @@ Returns an object of type [Windows.Networking.Connectivity.NetworkUsageStates], 
 
 ### Setup
 #### Online
-* The **NetworkUsage-PowerShell module** is now listed on **PowerShell Gallery**, therefore it can be installed by using ...
-```ps
-Install-Module endpointmanager.networkusage
-```
+* The **NetworkUsage-PowerShell module** is now listed on **PowerShell Gallery**, therefore it can be installed by using:  
+    ```ps
+    Install-Module endpointmanager.networkusage
+    ```
 #### Offline
 * Extract the folder (endpointmanager.networkusage) from the Release-zip to %ProgramFiles%\WindowsPowerShell\Modules\endpointmanager
 * OR use "**Import**-Module .\endpointmanager.networkusage\endpointmanager.networkusage.**psd1**" from the root directory of the extracted Release-zip
