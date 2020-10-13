@@ -12,7 +12,7 @@
 RootModule = 'endpointmanager.networkusage.dll'
 
 # Version number of this module.
-ModuleVersion = '1.0.0.1'
+ModuleVersion = '1.0.0.2'
 
 # Supported PSEditions
 # CompatiblePSEditions = @()
@@ -72,7 +72,7 @@ RequiredAssemblies = @('endpointmanager.networkusage.dll','Microsoft.Win32.Primi
 FunctionsToExport = '*'
 
 # Cmdlets to export from this module
-CmdletsToExport = '*'
+CmdletsToExport = @('Get-AttributedNetworkUsage','Get-ConnectionCost','Get-ConnectionProfiles','Get-ConnectivityIntervals','Get-DataPlanStatus','Get-DomainConnectivityLevel','Get-InternetConnectionProfile','Get-NetworkConnectivityLevel','Get-NetworkNames','Get-NetworkUsage','Get-ProviderNetworkUsage','Get-SignalBars','New-NetworkUsageStates')
 
 # Variables to export from this module
 VariablesToExport = '*'
