@@ -43,7 +43,8 @@ Gets the cost information for the connection.
 ### Get-DataPlanStatus
 Gets the current status of the data plan associated with the connection.  
 (Derived from ConnectionProfile.GetDataPlanStatus())  
-> A data plan can be configured in the Windows-Settings UI (Network & Internet -> Data usage -> Set/Edit Limit) on WWAN Connections. (Maybe grayed out if the costs of connections are configured by GPO, e.g. "Set 4G Cost" is set to "Unrestricted")
+> A data plan can be configured in the Windows-Settings UI (Network & Internet -> Data usage -> Set/Edit Limit) for each connection profile.
+(The settings to configure a limit are grayed out if the costs for the connection type are configured by GPO, e.g. "Set 4G Cost" is set to "Unrestricted")
 The measured data may differ from your service provider's measurement.
 
 ### Get-DomainConnectivityLevel
